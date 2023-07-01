@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "django-webpage"
+version = "0.1.0"
+description = ""
+authors = ["TaleeBarbieri <talee.alexei@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "django_webpage"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.2"
+pysqlite3 = "^0.5.1"
+django-bootstrap-v5 = "^1.0.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,21 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% if user.is_authenticated %}
+
+    {% include 'navbar_logged_in.html'%}
+
+{% else %}
+
+    {% include 'navbar_logged_out.html'%}
+
+{%endif%}
+{% endblock %}

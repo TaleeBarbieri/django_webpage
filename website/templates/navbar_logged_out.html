@@ -1,0 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'Navbar_style.css' %}">
+
+
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">Navbar</a>
+    <span class="navbar-text">
+        Not Logged in |
+        <a href="{% url 'login' %}">Log In</a>
+    </span>
+  </div>
+</nav>
