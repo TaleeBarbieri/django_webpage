@@ -4,6 +4,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+{% load static %}
 
 {% load bootstrap5 %}
 {% bootstrap_css %}
@@ -18,4 +19,7 @@
     {% include 'navbar_logged_out.html'%}
 
 {%endif%}
+
+<link rel="stylesheet" href="{% static 'Home_style.css' %}">
+
 {% endblock %}

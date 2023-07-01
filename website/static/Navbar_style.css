@@ -1,11 +1,13 @@
 .navbar-brand{
 
-    color: white;
+    color: orange;
+    font-size: 27px;
 
 }
 
 .navbar-text{
 
-    color: white;
+    color: orange;
+    font-size: 17px;
 
 }
