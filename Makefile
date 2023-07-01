@@ -6,3 +6,6 @@ migrate:
 
 runserver:
 	./manage.py runserver
+
+pre-commit-all:
+	pre-commit run --all-files

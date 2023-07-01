@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color:#98a7fa;
     font-family: 'Arial';
+    height: 750px;
 }
 
 
@@ -17,20 +18,21 @@ body{
     position: center;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 360px;
+    max-width: 950px;
     margin: 0 auto 100px;
-    padding: 45px;
+    padding: 4px;
     text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 25px;
 }
 
 .form button {
+    margin: 0 170px;
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
     outline: 0;
     background: #262725;
-    width: 100%;
+    width: 60%;
     border: 0;
     padding: 15px;
     color: #FFFFFF;
@@ -49,6 +51,8 @@ body{
 
 .title{
 
-    font-size: 33px;
+    font-size: 31px;
+    text-decoration: underline
+
 
 }
