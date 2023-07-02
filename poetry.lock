@@ -75,6 +75,17 @@ django = ">=2.2,<5.0"
 docs = ["m2r2 (>=0.2.5,<0.3.0)", "sphinx (>=4.4,<5.0)", "sphinx_rtd_theme (>=1.0,<2.0)"]
 
 [[package]]
+name = "django-google-translate"
+version = "1.1"
+description = "Add google translate to your website templates easily."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-google-translate-1.1.tar.gz", hash = "sha256:139f4b2f6809789847543c1cb940374fa61d676506ecce0eab7919446cc9c0b6"},
+]
+
+[[package]]
 name = "pysqlite3"
 version = "0.5.1"
 description = "DB-API 2.0 interface for Sqlite 3.x"
@@ -129,4 +140,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5e4b66e0f02a7f19e0a7cf430657361bc4a53e2b949ff928abfa1ac683122671"
+content-hash = "888e8d446fa320621a4f2b814b4c4b07c820b2bcf808a9f6636d4dc825bc4417"

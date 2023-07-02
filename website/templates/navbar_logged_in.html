@@ -5,8 +5,8 @@
 
 <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
   <div class="container-fluid">
- <a class="navbar-brand" href="/home"><img src="https://logodix.com/logo/94018.png " width="32" height="32" class="d-inline-block align-text-top"> Navbar</a>
-    <span class="navbar-text">
+    <a class="navbar-brand" href="/home"><img src="https://logodix.com/logo/94018.png " width="32" height="32" class="d-inline-block align-text-top"> Bike_Site</a>
+      <span class="navbar-text">
       {% if user.is_authenticated %}
         Logged in as {{ user.username.upper }} |
         <a href="{% url 'logout' %}">LOG OUT</a>

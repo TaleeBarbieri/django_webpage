@@ -1,4 +1,4 @@
-body{
+body,html {
   position: relative;
   min-height: 200vh;
 
@@ -12,3 +12,4 @@ footer{
     padding-bottom: 0rem;    /* Footer height */
 
 }
+
