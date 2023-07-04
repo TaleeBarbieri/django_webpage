@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
 
@@ -19,10 +19,10 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            messages.success(request, "Account successfully created!" )
+            messages.success(request, "Account successfully created!")
             return redirect('/account/login')
 
     else:
         form = SignUpForm()
 
-    return render(request, "registration/signup.html", {"form":form})
+    return render(request, "registration/signup.html", {"form": form})

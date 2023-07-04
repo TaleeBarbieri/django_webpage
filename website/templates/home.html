@@ -12,25 +12,71 @@
 {% bootstrap_javascript %}
 {% load google_translate %}
 
+
 <link rel="stylesheet" href="{% static 'Home_style.css' %}">
+<link rel="stylesheet" href="{% static 'Navbar_style.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<head>
-<!-- User Validation Navbar -->
-{% if user.is_authenticated %}
 
-    {% include 'navbar_logged_in.html'%}
 
-{% else %}
+<nav class="navbar bg-dark border-bottom border-bottom-dark " data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="/home">
+      <img src="https://logodix.com/logo/94018.png" width="32" height="32" class="d-inline-block align-text-top">
+      Daily.Tech.News
+    </a>
+      <div class="dropdown me-auto">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Other
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Option 1</a></li>
+          <li><a class="dropdown-item" href="#">Option 2</a></li>
+          <li><a class="dropdown-item" href="#">Option 3</a></li>
+        </ul>
+      </div>
 
-    {% include 'navbar_logged_out.html'%}
+    <span class="navbar-text me-auto" id="currentDateTime"></span>
 
-{%endif%}
-</head>
+      <span class="navbar-text">
+        {% if user.is_authenticated %}
+          Logged in as {{ user.username.upper }} |
+          <a href="{% url 'logout' %}">LOG OUT</a>
+        {% else %}
+          Not Logged in |
+          <a href="{% url 'login' %}">LOG IN</a>
+        {% endif %}
+      </span>
+  </div>
+</nav>
+
+<!-- JS script for time and date-->
+<script>
+  function updateTime() {
+    var now = new Date();
+    var formattedDate = now.toLocaleDateString();
+    var formattedTime = now.toLocaleTimeString();
+    $('#currentDateTime').text(formattedDate + ' ' + formattedTime);
+  }
+
+  $(document).ready(function() {
+    updateTime();
+    setInterval(updateTime, 1000); // Update every second
+  });
+</script>
+
+
+
 
 <body>
 
 </body>
 
+
+{% endblock%}
+
+
+{% block footer%}
 
 <!-- Footer CSS -->
 {%load static%}
