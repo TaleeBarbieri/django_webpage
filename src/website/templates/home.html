@@ -15,7 +15,6 @@
 
 <link rel="stylesheet" href="{% static 'Home_style.css' %}">
 <link rel="stylesheet" href="{% static 'Navbar_style.css' %}">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
@@ -23,20 +22,9 @@
   <div class="container-fluid">
     <a class="navbar-brand " href="/home">
       <img src="https://logodix.com/logo/94018.png" width="32" height="32" class="d-inline-block align-text-top">
-      Daily.Tech.News
+      Website
     </a>
-      <div class="dropdown me-auto">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Other
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="#">Option 1</a></li>
-          <li><a class="dropdown-item" href="#">Option 2</a></li>
-          <li><a class="dropdown-item" href="#">Option 3</a></li>
-        </ul>
-      </div>
 
-    <span class="navbar-text me-auto" id="currentDateTime"></span>
 
       <span class="navbar-text">
         {% if user.is_authenticated %}
@@ -50,28 +38,14 @@
   </div>
 </nav>
 
-<!-- JS script for time and date-->
-<script>
-  function updateTime() {
-    var now = new Date();
-    var formattedDate = now.toLocaleDateString();
-    var formattedTime = now.toLocaleTimeString();
-    $('#currentDateTime').text(formattedDate + ' ' + formattedTime);
-  }
-
-  $(document).ready(function() {
-    updateTime();
-    setInterval(updateTime, 1000); // Update every second
-  });
-</script>
 
 
 
-
+<html>
 <body>
 
 </body>
-
+</html>
 
 {% endblock%}
 

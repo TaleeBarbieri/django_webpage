@@ -12,19 +12,20 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from .environ import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9j2g$_-29_7=w_j7=1op7m^xxsq=w8mmy$3^wlskp*r*-b!_kj'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -55,7 +56,7 @@ MIDDLEWARE = [
     'src.website.register.middleware.RestrictAdminMiddleware',
 ]
 
-ROOT_URLCONF = 'src.website.config.urls'
+ROOT_URLCONF = 'website.config.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'src.website.config.wsgi.application'
+WSGI_APPLICATION = 'website.config.wsgi.application'
 
 
 # Database
