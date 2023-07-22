@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'google_translate.apps.TranslateConfig',
+    'website',
+    'website.register.apps',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     #Apps Middleware
-    'src.website.register.middleware.RestrictAdminMiddleware',
+    'website.register.middleware.RestrictAdminMiddleware',
 ]
 
 ROOT_URLCONF = 'website.config.urls'
@@ -82,8 +84,12 @@ WSGI_APPLICATION = 'website.config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

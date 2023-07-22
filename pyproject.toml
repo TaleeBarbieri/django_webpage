@@ -16,6 +16,8 @@ django-google-translate = "^1.1"
 pytest = "^7.4.0"
 pytest-django = "^4.5.2"
 django-environ = "^0.10.0"
+requests = "^2.31.0"
+psycopg2-binary = "^2.9.6"
 
 
 
