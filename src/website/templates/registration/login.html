@@ -11,7 +11,7 @@
 
 
 
-<div class="signin">
+<div class="login">
   <div class="form">
     <div class="msg">
       {% include 'messages.html' %}
@@ -21,7 +21,8 @@
           {% csrf_token %}
           {{ form.as_p }}
         <button type="submit">Sign In</button>
-        <p>Don't have an account? Create one <a href="/signup" a> here </p>
+        <p>Reset Password <a href="/account/reset_password">here</a></p>
+        <p>Don't have an account? Create one <a href="/signup">here</a></p>
           </h2>
         </form>
   </div>
