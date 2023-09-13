@@ -36,6 +36,12 @@ def reset_password(request):
             messages.error(request, "Please provide both username and new password.")
             return render(request, "reset_password.html")
 
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            messages.error(request, "User with the provided username does not exist.")
+            return render(request, "reset_password.html")
+
         if raw_password != confirm_password:
             messages.error(request, "New passwords do not match.")
             return render(request, "reset_password.html")
