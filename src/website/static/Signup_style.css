@@ -56,3 +56,10 @@ body{
 
 
 }
+
+@media (max-width:300px, max-height:50px) {
+  /* For mobile phones: */
+  .title, .signup, .form{
+    width: 10%;
+  }
+}
