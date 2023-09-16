@@ -1,33 +1,24 @@
 .navbar-brand{
 
     color: orange;
-    font-size: 24px;
+    font-size: 35px;
     font-family: Courier, monospace;
 
 }
 
-.navbar-text{
+.navbar-login{
 
     color: orange;
-    font-size: 17px;
-
-}
-
-.dropdown{
-
     font-size: 19px;
 
 }
 
-#navbarDropdownMenuLink{
+/*
+.navbar-login img{
 
-    color: orange;
-
-
-}
-
-#currentDateTime{
-
-    position: relative;
+    background-color: white;
+    border-radius: 30%;
 
 }
+*/
+

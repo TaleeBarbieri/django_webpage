@@ -16,24 +16,28 @@
 <link rel="stylesheet" href="{% static 'Home_style.css' %}">
 <link rel="stylesheet" href="{% static 'Navbar_style.css' %}">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- for mobile view -->
+<meta name="viewport" content="width=device-width, initial-scale=0.9">  <!-- for mobile view -->
 
 
 <nav class="navbar bg-dark border-bottom border-bottom-dark " data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand " href="/home">
-      <img src="https://logodix.com/logo/94018.png" width="32" height="32" class="d-inline-block align-text-top">
+      <img src="https://logodix.com/logo/94018.png" width="39" height="39" class="d-inline-block align-text-top">
       Website
     </a>
 
 
-      <span class="navbar-text">
+      <span class="navbar-login">
         {% if user.is_authenticated %}
           Logged in as {{ user.username.upper }} |
           <a href="{% url 'logout' %}">LOG OUT</a>
         {% else %}
           Not Logged in |
           <a href="{% url 'login' %}">LOG IN</a>
+          <img src="https://static.thenounproject.com/png/2606542-200.png" width="26" height="26" class="d-inline-block align-text-top">
+          <h>|</h>
+          <a href="{% url 'register' %}">SIGNUP</a>
+          <img src="https://static.thenounproject.com/png/736672-200.png" width="26" height="26" class="d-inline-block align-text-top">
         {% endif %}
       </span>
   </div>

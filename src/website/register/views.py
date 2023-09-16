@@ -4,7 +4,9 @@ from django.contrib import messages
 from .forms import SignUpForm
 from django.contrib.auth.models import User
 
-
+def activateEmail(request,user,to_email):
+    messages.success(request, f'Dear {user}, please go to your email {to_email} inbox and click on \
+     received activation link to comfirm and complete the registration. Note: Check your spam folder.')
 
 def signup(request):
     if request.method == "POST":
@@ -14,10 +16,7 @@ def signup(request):
             user = form.save(commit=False)  # Create user object without saving
             user.is_staff = False  # Set is_staff attribute to False
             form.save()  # Save the user object
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
+            activateEmail(request,user,form.cleaned_data.get('email'))
             messages.success(request, "Account successfully created!")
             return redirect('/account/login')
 
